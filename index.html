@@ -1,0 +1,131 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- Nhúng file CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Signup Form</title>
+
+</head>
+
+<body>
+  <form action="" method="POST" onsubmit="return validate()">
+    <div class="register">
+      <h1>Đăng ký</h1>
+      <p>Vui lòng điền thông tin để đăng ký</p>
+      <div class="form-group">
+        <label for="username"><b>Tên đăng nhập </b><span>(*)</span></label>
+        <input type="text" placeholder="" name="username" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Mật khẩu </b><span>(*)</span></label>
+        <input type="password" placeholder="******" name="password" id="password" />
+      </div>
+      <div class="form-group">
+        <label for="password-repeat"><b>Nhập lại mật khẩu </b><span>(*)</span></label>
+        <input type="password" placeholder="******" name="password-repeat" id="password-repeat" />
+      </div>
+      <div class="form-group">
+        <label for="phone"><b>Số điện thoại </b><span>(*)</span></label>
+        <input type="text" placeholder="" name="phone" id="phone" />
+      </div>
+      <div class="form-group">
+        <label for="birth"><b>Ngày sinh </b><span></span></label>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputDay">Ngày</label>
+          <select id="inputMonth" class="form-control" style="background: #f1f1f1;">
+            <option selected>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option>9</option><option>10</option><option>11</option><option>12</option>
+            <option>13</option><option>14</option><option>15</option><option>16</option>
+            <option>17</option><option>18</option><option>19</option><option>20</option>
+            <option>21</option><option>22</option><option>23</option><option>24</option>
+            <option>25</option><option>26</option><option>27</option><option>28</option>
+            <option>29</option><option>30</option><option>31</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputMonth">Tháng</label>
+          <select id="inputMonth" class="form-control" style="background: #f1f1f1;">
+            <option selected>January</option><option>February</option><option>March</option><option>April</option>
+            <option>May</option><option>June</option><option>July</option><option>August</option>
+            <option>September</option><option>October</option><option>November</option><option>December</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputYear">Năm</label>
+          <input type="text" style="margin: 0; padding: 8px" id="inputYear">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="sex"><b>Giới tính</b></label>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Nam</label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-left: 110px;">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Nữ</label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-left: 110px;">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Khác</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="form-group col-md-9">
+            <label for="inputState"><b>Thành phố</b></label>
+            <select id="inputState" class="form-control" style="background: #f1f1f1;">
+              <option selected >Chọn...</option>
+              <option>...</option>
+              <option>...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputZip"><b>Zip Code</b></label>
+            <input type="text" style="margin: 0; padding: 8px" id="inputZip">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="6Ldlwo0aAAAAAJ35zrBeimSqAtzaugfBpWs4uy5y" action="signup"></div>
+      </div>
+      
+      <div class="form-group">
+        <label for="check-box">
+          <input class="form-check-input" style="margin-left: 0rem;" type="checkbox" id="gridCheck">
+          <p style="margin-left: 1.75rem;">Tôi đã đọc và đồng ý các điều kiện 
+            <a href="#">Thỏa thuận sử dụng</a>.</p>
+        </label>
+      </div>
+      
+      <button type="submit" class="submit">Đăng ký</button>
+    </div>
+    <div class="register login">
+      <p>Bạn đã có tài khoản rồi? <a href="#">Đăng nhập</a>.</p>
+    </div>
+  </form>
+
+
+  <script language="javascript" src="./index.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?hl=vi"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
